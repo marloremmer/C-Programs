@@ -1,0 +1,20 @@
+#include<iostream>
+#include<conio.h>
+#include<stdio.h>
+using namespace std;
+
+/* A=65, E=69, I=73, O=79, U=85*/
+main()
+{
+      int letter;
+      printf("This this program will display all consonants letters from A-Z\n\n\a");
+             letter = 65;
+             while(letter < 91) 
+             { 
+             if(letter==65 || letter==69 || letter==73 || letter==79 || letter==85); 
+             else 
+             printf(" %c ", letter); 
+             letter++; 
+             } 
+      getche();
+}
