@@ -1,0 +1,21 @@
+#include<iostream>
+#include<conio.h>
+#include<stdio.h>
+using namespace std;
+
+main()
+{
+      float inch, meter, cm;
+      
+      cout<<"Enter a unit of inch that will be converted to meter: ";
+      cin>>inch;
+      
+      cm = inch * 2.54;
+      meter = cm /100;
+      
+      cout<<endl;
+      cout<<endl;
+      cout<<"The "<<inch<<" inch is equivalent to "<<meter<<" meter.";
+      
+      getche();
+}
