@@ -1,0 +1,34 @@
+#include<iostream>
+#include<conio.h>
+#include<stdio.h>
+using namespace std;
+
+
+float sum, enter_scores, ave;
+
+float sum_ave()
+{
+      ave = sum / enter_scores;
+      return ave;
+}
+
+main()
+{
+      float scores, x;
+      
+      cout<<"How many scores: ";
+      cin>>enter_scores;
+      
+      sum = 0;
+      
+      for(x=1;x<=enter_scores;x++)
+      {
+           cout<<"scores: ";
+           cin>>scores;
+           sum = sum + scores;
+      }
+      sum_ave();
+      cout<<"The average score is: "<<ave;
+      
+      getche();
+}
