@@ -1,0 +1,48 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+float peso, dollar, pound, yen;
+int convert;
+
+float conversion(float &peso, float &dollar, float &pound, float &yen)
+{
+      dollar = peso / 42.3422;
+      pound = (peso/42.3422)*0.505561;
+      yen = (peso/42.3422)*104.707;
+}
+
+main()
+{
+      cout<<"Enter currency in Peso: ";
+      cin>>peso;
+      cout<<"\nYou have "<<peso<<" Pesos you want to convert this in?";
+      cout<<"\n 1 - Dollar";
+      cout<<"\n 2 - Pounds";
+      cout<<"\n 3 - Yen";
+      cout<<"\nchoice: ";
+      cin>>convert;
+      switch(convert)
+      {
+           case 1:
+                {
+                     conversion(peso, dollar, pound, yen);                     
+                     cout<<"\nThis is equivalent to "<<dollar<<" dollar ";
+                     break;
+                }
+           case 2:
+                {
+                     conversion(peso, dollar, pound, yen);
+                     cout<<"\This is equivalent to "<<pound<<" pound ";
+                     break;
+                }
+           case 3:
+                {
+                     conversion(peso, dollar, pound, yen);
+                     cout<<"\nThis is equivalent to "<<yen<<" yen ";
+                     break;
+                }
+      }
+      
+      getche();
+}
