@@ -1,0 +1,28 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+main()
+{
+      int num,positive,negative,num_enter;
+      num_enter=0;
+      positive=0;
+      negative=0;
+      
+      do{
+          cout<<"Enter number: ";
+          cin>>num;
+          
+          if (num>0)
+          positive++;
+          else
+          negative++;
+          
+          num_enter++;
+          }while(num_enter!=10);
+          
+          cout<<"\nPositive = "<<positive;
+          cout<<"\nNegative = "<<negative;
+          
+          getche();
+          }
