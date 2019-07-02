@@ -1,0 +1,25 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+int years, months, weeks, days, hours;
+
+int year(int &yr, int &month, int &week, int &day, int &hour)
+{
+     years = years;
+     months = 12 * years;
+     weeks = 4 * months;
+     days = 7 * weeks;
+     hours = 24 * days;
+}
+
+main()
+{
+      cout<<"Enter a number of years: ";
+      cin>>years;
+      
+      year(years, months, weeks, days, hours);
+      cout<<""<<years<<" year is "<<months<<" months, "<<weeks<<" weeks, "<<days<<" days and "<<hours<<" hours.";
+      
+      getche();
+} 
