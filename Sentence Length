@@ -1,0 +1,28 @@
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+
+main()
+{
+	int darryl,length=0,james=0;
+	char str[20],sentence;
+
+	cout<<"Enter a word: "<<endl;
+	cin>>str;
+	
+	length=strlen(str);
+	james=length-1;
+
+	for(darryl=0;darryl<length/2;darryl++)
+	{
+		sentence=str[darryl];
+		str[darryl]=str[james];
+		str[james]=sentence;
+
+		james--;
+	}
+	cout<<str<<endl;
+
+	getch();
+}
