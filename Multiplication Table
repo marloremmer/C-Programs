@@ -1,0 +1,34 @@
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+main()
+{
+      int row, column, first, second, third, equal, multiplicand=1, multiplier=1;
+      
+      cout<<"I will create a multiplication table for you!";
+      cout<<"\nHow many rows and columns? ";
+      cin>>row;
+      cin>>column;
+      int table[row][column];
+      for (first=1;first<=row;first++){
+          cout<<"\t"<<first;}
+          cout<<endl;
+      for(second=0;second<=column-1;second++)
+      {     
+                           cout<<endl;
+                           equal=second+1;
+                           cout<<equal<<"\t";
+                          for(third=0;third<=row-1;third++)
+                          {                                                                         
+                          table[second][third]=(third+1)*(second+1);
+                          cout<<table[second][third]<<"\t";
+                          multiplicand++;
+                          }
+                                          multiplier++;
+                                          
+                                          
+      }
+      getche();
+      }
