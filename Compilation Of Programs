@@ -1,0 +1,302 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+main()
+{
+	//Start up Display
+	int prog;
+	printf("Choose Program that you want to Run:");
+	printf("\n[1] Inch to Meter");
+	printf("\n[2] Year to Minutes");
+	printf("\n[3] Average of three numbers");
+	printf("\n[4] Highest to Lowest");
+	printf("\n[5] Ascending and Descending Order");
+	printf("\n[6] Roman Numerals");
+	printf("\n[7] Telephone Call");
+	printf("\nEnter your choice: ");
+	scanf("%d", &prog);
+	system("cls");
+	
+	//Program no.1
+	if (prog==1) 
+	{
+	float inch, inputinch, meter;
+	printf("You choose Program No. 1");
+	printf("\n\nEnter a unit that will be converted to meter: ");
+	scanf("%f", &inputinch);
+	inch = inputinch * 2.54;
+	meter = 100 * inch;
+	system("cls");
+	printf("\nThe %0.0f inch/s is equivalent to %0.0f meter", inputinch, meter);
+	printf("\n\nThank you for using the program");
+	getch();
+	}
+	
+	
+	//Program no. 2
+	if (prog==2)
+	{
+	float year, hours, mins, day;
+	printf("You choose Program No. 2");
+	printf("\n\nEnter a year that will be converted to minutes: ");
+	scanf("%f", &year);
+	day = year * 365;
+    hours = day * 24;
+    mins = hours * 60;
+    system("cls");
+	printf("\n%0.0f year is equivalent to %0.0f minutes", year, mins);
+	printf("\n\nThank you for using the program");
+	getch();
+	}
+	
+	//Program No. 3
+	if (prog==3)
+	{
+	float grade1, grade2, grade3, sum, ave;
+	printf("You choose Program No. 3");
+	printf("\n\nEnter Three Grades: ");
+	printf("\n\nEnter your 1st Grade: ");
+	scanf("%f", &grade1);
+	printf("\nEnter your 2nd Grade: ");
+	scanf("%f", &grade2);
+	printf("\nEnter your 3rd Grade: ");
+	scanf("%f", &grade3);
+	system("cls");
+	sum = grade1 + grade2 + grade3;
+	ave = sum / 3;
+	printf("\nThe sum is %0.0f and the average is %0.0f", sum, ave);
+	printf("\n\nThank you for using the program");
+	getch();
+	}
+	
+	//Program No. 4
+	if (prog==4)
+	{
+	int num1, num2, num3, num4, num5;
+	printf("You choose Program No. 4");
+	printf("\n\nEnter 5 numbers: ");
+	scanf("%d %d %d %d %d", &num1, &num2, &num3, &num4, &num5);
+	if (num1>num2&&num1>num3&&num1>num4&&num1>num5)
+	printf("\nThe highest is %d", num1);
+	else if (num2>num3&&num2>num1&&num3>num4&&num2>num5)
+	printf("\nThe highest is %d", num2);
+	else if (num3>num1&&num3>num2&&num3>num4&&num3>num5)
+	printf("\nThe highest is %d", num3);
+	else if (num4>num1&&num4>num2&&num4>num3&&num4>num5)
+	printf("\nThe highest is %d", num4);
+	else 
+	printf("\nThe highest is %d", num5);
+	if (num1<num2&&num1<num3&&num1<num4&&num1<num5)
+	printf(" and the lowest is %d", num1);
+	else if (num2<num3&&num2<num1&&num3<num4&&num2<num5)
+	printf(" and the lowest is %d", num2);
+	else if (num3<num1&&num3<num2&&num3<num4&&num3<num5)
+	printf(" and lowest is %d", num3);
+	else if (num4<num1&&num4<num2&&num4<num3&&num4<num5)
+	printf(" and lowest is %d", num4);
+	else 
+	printf(" and lowest is %d", num5);
+	getch();
+	}
+	
+	//Program No. 5 
+	if (prog==5)
+	{
+	int num1, num2, num3;
+	printf("You choose Program No. 5");
+    printf("\n\nEnter 3 numbers: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+      
+       	if(num1>num2&&num1>3&&num2>num3)
+           {
+           printf("\nDescending order: %d %d %d\n", num1, num2, num3);
+           printf("\nAscending order: %d %d %d\a", num3, num2,num1);
+           }
+      else if(num1>num2&&num1>num3&&num3>num2)
+           {
+           printf("\nDescending order: %d %d %d\n", num1, num3, num2);
+           printf("\nAscending order: %d %d %d", num2, num3, num1);
+           }
+      else if(num2>num1&&num2>num3&&num1>num3)
+           {
+           printf("\nDescending order: %d %d %d\n", num2, num1, num3);
+           printf("\nAscending order: %d %d %d", num3, num1, num2);
+           }	
+      else if(num2>num1&&num2>num3&&num3>num1)
+           {
+           printf("\nDescending order: %d %d %d\n", num2, num3, num1);
+           printf("\nAscending order: %d %d %d", num1, num3, num2);
+           }
+      else if(num3>num1&&num3>num2&&num1>num2)
+           {
+           printf("\nDescending order: %d %d %d\n", num3, num1, num2);
+           printf("\nAscending order: %d %d %d", num2, num1, num3);
+           }
+      else
+           {
+           printf("\nDescending order: %d %d %d\n", num3, num2, num1);
+           printf("\nAscending order: %d %d %d", num1, num2, num3);
+           printf("\n\nThank you for using the program");
+		   }	
+	}
+	
+	//Program 6
+	if (prog==6)
+	{
+		int inputyear, thousand, thousand_rem, hundred, hundred_rem, ten, one;
+	printf("You choose Program No. 6");
+	printf("\n\nEnter a year between 1000 and 3000: ");
+	scanf("%d", &inputyear);
+	
+		if (inputyear >= 1000 && inputyear <=3000)
+	{
+		thousand=inputyear/1000;
+		thousand_rem=inputyear%1000;
+	
+		hundred=thousand_rem/100;
+		hundred_rem=thousand_rem&100;
+	
+		ten=hundred_rem/10;
+		one=hundred_rem&10;
+	
+		printf("\nThe equivalent in Roman Numeral is ");
+	
+		if (thousand==1)
+		printf( "M");
+		else if (thousand==2)
+		printf( "MM");
+		else if (thousand==3)
+		printf( "MMM");
+			
+			if (hundred==1)
+			printf( "C");
+			else if (hundred==2)
+			printf( "CC");
+			else if (hundred==3)
+			printf( "CCC");
+			else if (hundred==4)
+			printf( "CD");
+			else if (hundred==5)
+			printf( "D");
+			else if (hundred==6)
+			printf( "DC");
+			else if (hundred==7)
+			printf( "DCC");
+			else if (hundred==8)
+			printf( "DCCC");
+			else if (hundred==9)
+			printf( "CM");
+	
+				if (ten==1)
+				printf( "X");
+				else if (ten==2)
+				printf( "XX");
+				else if (ten==3)
+				printf( "XXX");
+				else if (ten==4)
+				printf( "XL");
+				else if (ten==5)
+				printf( "L");
+				else if (ten==6)
+				printf( "LX");
+				else if (ten==7)
+				printf( "LXX");
+				else if (ten==8)
+				printf( "LXXX");
+				else if (ten==9)
+				printf( "XC");
+	
+					if (one==1)
+					printf( "I");
+					else if (one==2)
+					printf( "II");
+					else if (one==3)
+					printf( "III");
+					else if (one==4)
+					printf( "IV");
+					else if (one==5)
+					printf( "V");
+					else if (one==6)
+					printf( "VI");
+					else if (one==7)
+					printf( "VII");
+					else if (one==8)
+					printf( "VIII");
+					else if (one==9)
+					printf( "IX");
+		
+						printf( ".");	
+	}
+	else
+	printf( "Invalid Input.");
+	}
+	
+	//Program no. 7
+	if (prog==7)
+{
+      int callcode,timecode,duration,total,NT,choice;
+      printf("You choose Program No. 7");
+	  printf("\n\nCall Destination Code: ");   
+      printf("\n[1] Off-Peak");
+      printf("\n[2] Peak");
+      printf("\n\nEnter your choice: ");
+      scanf("%d", &choice);
+		system("cls");
+		if (choice==1)
+		{
+    			printf("You choose Off-peak");
+                printf("\n\n      Off-Peak Hours\t\t\t Rate/min");
+                printf("\n[1] Call to the same network\t\t P 8");
+                printf("\n[2] Call to other networks\t\t P 8 ");
+                printf("\n[3] Call to a landline\t\t\t P 8");
+                printf("\n[4] National direct dial\t\t P 11");
+                printf("\n[5] International direct dial\t\t P 20");
+                printf("\nTimecode: ");
+                scanf("%d", &timecode);
+                
+                        if (timecode == 1 || timecode==2 ||timecode==3)
+                        timecode = 8;
+                        else if (timecode ==4)
+                        timecode = 11;
+                        else if (timecode ==5)
+                    	timecode =20;
+                        printf("Duration of Call: ");
+                		scanf("%d", &duration);
+                        NT= timecode * duration;
+                    	printf("The total cost charges is: %d Php.", NT);
+    }
+     if (choice==2)
+     {
+     					printf("You choose Peak");
+     					printf("\n\n      Peak Hours\t\t\t Rate/min");
+                		printf("\n[1] Call to the same network\t\t P 3");
+                		printf("\n[2] Call to other networks\t\t P 4 ");
+                		printf("\n[3] Call to a landline\t\t\t P 4");
+               		 	printf("\n[4] National direct dial\t\t P 7");
+                		printf("\n[5] International direct dial\t\t P 20");
+                        printf("\nTime Code: ");
+                        scanf("%d", &timecode);
+                            
+                            if (timecode==1)
+                            timecode = 3;
+                            else if (timecode == 2 ||timecode==3)
+                            timecode = 4;
+                            else if (timecode ==4 )
+                            timecode = 7;
+                            else if (timecode ==5 )
+                            timecode = 20;
+                            printf("Duration of Call: ");
+                            scanf("%d", &duration);
+                            NT= timecode * duration;
+                            printf("The total cost charges is: %d Php.", NT);
+                         }
+        }
+        else
+        {
+        	system("cls");
+        	printf("Invalid Input.\nThank you for using the program.");
+        }
+                
+      getche();
+      return 0;
+      }
