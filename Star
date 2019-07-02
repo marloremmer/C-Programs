@@ -1,0 +1,28 @@
+#include<iostream>
+#include<conio.h>
+#include<stdio.h>
+
+using namespace std;
+
+
+main()
+{
+      int row1,row2,row3,row4,row5,row6,row7;
+      
+      for(row1=1;row1<=1;row1++){cout<<"\t\t\t\t"<<'*';}
+                        cout<<endl<<endl<<"\t\t";
+      for(row2=1;row2<=2;row2++){cout<<"\t";
+                        cout<<"    "<<'*';}
+                        cout<<endl<<endl<<"\t";
+      for(row3=1;row3<=5;row3++){cout<<"\t"<<'*';}
+                        cout<<endl<<endl<<"\t\t";
+      for(row4=1;row4<=4;row4++){cout<<"      "<<'*';}
+                        cout<<endl<<endl<<"\t";
+      for(row5=1;row5<=5;row5++){cout<<"\t"<<'*';}
+                        cout<<endl<<endl<<"\t\t";
+      for(row6=1;row6<=2;row6++){cout<<"\t";
+                        cout<<"    "<<'*';}
+                        cout<<endl<<endl;
+      for(row7=1;row7<=1;row7++){cout<<"          \t\t\t"<<'*';}
+      getche();
+}
