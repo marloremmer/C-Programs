@@ -1,0 +1,26 @@
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+
+main()
+{
+      char str[30];
+      int length,strnew;
+      char gets[30];
+      cout<<"Enter a word: ";
+      gets(str);
+      cout<<endl;      
+      length=strlen(str);
+      
+      strnew=0;
+      while (strnew<=length)
+      {
+        if (str[strnew]>='a')                    
+            putchar(toupper(str[strnew]));
+        else if (str[strnew]>='A')
+            putchar(tolower(str[strnew]));
+            strnew++;
+      }
+      getche();
+      }
