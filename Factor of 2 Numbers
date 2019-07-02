@@ -1,0 +1,23 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+main()
+{
+     int num1, num2, fact;
+     
+     cout<<"Enter two numbers: "<<endl;
+     cin>>num1>>num2;
+     
+     cout<<"The factors is: ";
+     
+     (fact=num1)&&(fact=num2);
+     while (fact > 0)
+     {
+   
+     if((num1%fact==0)&&(num2%fact==0))
+	 cout<< fact<<" ";
+	 fact--;
+     }
+
+     getche();
+      }
