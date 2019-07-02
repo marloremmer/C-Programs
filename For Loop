@@ -1,0 +1,18 @@
+#include<iostream>
+#include<conio.h>
+#define c cout
+#define cc cin;
+using namespace std;
+main()
+{
+      int num,column,row;
+      cout<<"enter number: ";
+      cin>>num;
+      
+      for(column=1;column<=num;column++){
+                        for(row=1;row<=column;row++)
+                        c<<" "<< row<<" ";
+                        c<<endl;
+                        }
+                        getche();
+                        }
