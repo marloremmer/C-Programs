@@ -1,0 +1,42 @@
+#include<iostream.h>
+#include<conio.h>
+using namespace std;
+
+main()
+{
+    int digits[15], finite=0, digit1=0, digit2=0, output;
+    
+    cout<<"Input 15 numbers: " ;
+    
+    finite;
+    while(finite<15)
+    {
+        cin>>digits[finite] ; 
+        finite++;
+    }
+    digit1;
+    while(digit1<15)
+    {
+        digit2=digit1;
+        while(digit2<15)
+        {
+            if(digits[digit1] < digits[digit2])
+            {
+                output = digits[digit1];
+                digits[digit1] = digits[digit2];
+                digits[digit2] = output;
+            }
+        digit2++;
+        }
+    digit1++;
+    }
+    cout<<"The highest to lowest order will be: " ;
+
+    finite = 0;
+    while(finite<15)
+    {
+        cout<<digits[finite]<<" " ;
+        finite++;
+    }
+    getche();
+}
