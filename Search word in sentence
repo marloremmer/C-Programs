@@ -1,0 +1,28 @@
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+
+main()
+{    
+      char str[50],str1[11]="just do it",strc=0,length,loop1,loop2;
+      int strcmp;     
+      cout<<"Enter a string:"<<endl;
+      gets(str);
+      length=strlen(str);
+      for(loop1=0;loop1<length;loop1++){
+          for(loop2=0;loop2<10;loop2++){
+            if (str[loop1+loop2]==str[loop2])
+              {
+              strc++;                                                
+            if(strc==10){
+              cout<<"\"just do it\" was found on the sentence."<<endl;
+              }                                                                                     
+              }                                                        
+              }                     
+              }
+      if (strc>=0&&strc<9){
+      cout<<"\nThe words \"just do it\" cannot be found on your sentence.";}
+      
+      getche();
+      }
