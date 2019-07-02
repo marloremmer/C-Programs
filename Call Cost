@@ -1,0 +1,53 @@
+#include<iostream>
+#include<conio.h>
+#define c cout
+#define cc cin
+
+using namespace std;
+
+main()
+{
+      int callcode,timecode,duration,total,NT,choice;
+      c<<"Call Destination Code: "<<endl;   
+      c<<"[1] Off-peak"<<endl;
+      c<<"[2] peak"<<endl;
+      cc>>choice;
+switch(choice){
+                 case 1:
+                            c<<"Time Code: "<<endl;
+                            cc>>timecode;
+                           
+                           if (timecode == 1 || timecode==2 ||timecode==3)
+                           timecode = 8;
+                           else if (timecode ==4)
+                           timecode = 11;
+                           else if (timecode ==5)
+                           timecode =20;
+                           c<<"Duration of Call: "<<endl;
+                           cc>>duration;
+                           NT= timecode * duration;
+                           c<<"The total cost charges is: Php."<<NT;
+                           break;
+                 case 2:
+                            c<<"Time Code: "<<endl;
+                            cc>>timecode;
+                            
+                            if (timecode==1)
+                            timecode = 3;
+                            else if (timecode == 2 ||timecode==3)
+                            timecode = 4;
+                            else if (timecode ==4 )
+                            timecode = 7;
+                            else if (timecode ==5 )
+                            timecode = 20;
+                            c<<"Duration of Call: "<<endl;
+                            cc>>duration;
+                            NT= timecode * duration;
+                            c<<"The total cost charges is: Php."<<NT;
+                            break;
+                 default:
+                         c<<"invalid choice";
+                         }
+                
+      getche();
+      }
