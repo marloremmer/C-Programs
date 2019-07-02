@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<conio.h>
+
+
+main()
+{
+      int num1, num2, num3, num4, num5, lower, higher;
+      printf("Enter 5 numbers: ");
+      scanf("%d %d %d %d %d", &num1, &num2, &num3, &num4, &num5);
+
+      if (num1 < num2)
+      {
+         lower = num1; 
+         higher = num2;      
+      }
+      else
+      {
+         lower = num2;
+         higher = num1;
+      }
+      
+      if (num3 < lower)
+      {       
+         lower = num3; 
+      }
+      if (num4 < lower)
+      {
+         lower = num4; 
+      }
+      if (num5 < lower)
+      {
+         lower = num5;
+      }
+      
+      if (num3 > higher)
+      {
+         higher = num3;       
+      }
+      if (num4 > higher)
+      {
+         higher = num4;    
+      }
+      if (num5 > higher)
+      {
+         higher = num5;
+      }
+      
+      printf("The highest is %d and the lowest is %d", higher, lower);
+      getche();
+}
