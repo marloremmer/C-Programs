@@ -1,0 +1,21 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+main()
+{
+      float year, day, hours, mins, answer;
+      
+      cout<<"Enter a year that will be converted to minutes: ";
+      cin>>year;
+      
+      day = year * 365;
+      hours = day * 24;
+      mins = hours * 60;
+      
+      cout<<endl;
+      cout<<endl;
+      cout<<""<<year<<" year is equivalent to "<<mins<<" minutes";
+      
+      getche();
+}
