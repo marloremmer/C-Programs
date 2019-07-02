@@ -1,0 +1,96 @@
+#include<stdio.h>
+#include<conio.h>
+#define p printf
+#define s scanf
+main()
+{
+	int year, thou, thou_rem, hun, hun_rem, ten, one;
+	
+	p("Enter a year between 1000 and 3000:");
+	s("%d", &year);
+	
+	if (year >= 1000 && year <=3000)
+	{
+	thou=year/1000;
+	thou_rem=year%1000;
+	
+	hun=thou_rem/100;
+	hun_rem=thou_rem%100;
+	
+	ten=hun_rem/10;
+	one=hun_rem%10;
+	
+	p( "\nThe equivalent in Roman Numeral is ");
+	
+	if (thou==1)
+		p( "M");
+
+		else if (thou==2)
+			p( "MM");
+			else if (thou==3)
+			p( "MMM");
+			
+	if (hun==1)
+		p( "C");
+		else if (hun==2)
+		p( "CC");
+			else if (hun==3)
+			p( "CCC");
+				else if (hun==4)
+				p( "CD");
+					else if (hun==5)
+					p( "D");
+						else if (hun==6)
+						p( "DC");
+							else if (hun==7)
+							p( "DCC");
+								else if (hun==8)
+								p( "DCCC");
+									else if (hun==9)
+									p( "CM");
+	
+	if (ten==1)
+		p( "X");
+		else if (ten==2)
+		p( "XX");
+			else if (ten==3)
+			p( "XXX");
+				else if (ten==4)
+				p( "XL");
+					else if (ten==5)
+					p( "L");
+						else if (ten==6)
+						p( "LX");
+							else if (ten==7)
+							p( "LXX");
+								else if (ten==8)
+								p( "LXXX");
+									else if (ten==9)
+									p( "XC");
+	
+	if (one==1)
+		p( "I");
+		else if (one==2)
+		p( "II");
+			else if (one==3)
+			p( "III");
+				else if (one==4)
+				p( "IV");
+					else if (one==5)
+					p( "V");
+						else if (one==6)
+						p( "VI");
+							else if (one==7)
+							p( "VII");
+								else if (one==8)
+								p( "VIII");
+									else if (one==9)
+									p( "IX");
+		
+	p( ".");	
+	}
+	else
+		p( "Invalid Input.");
+		
+	getch();
+}
