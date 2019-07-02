@@ -1,0 +1,27 @@
+#include<iostream>
+#include<conio.h>
+#include<stdio.h>
+using namespace std;
+
+
+main()
+{
+      int prime_num,prime_num1;
+      
+      cout<<"This program will display all prime numbers from 1-100"<<endl;
+      prime_num=2;
+      do{
+           prime_num++;
+           int prime_num1=2;
+           do{
+               if (prime_num % prime_num1 == 0) 
+                break;
+            else if (prime_num == prime_num1+1)
+                cout << prime_num << " \a";
+                prime_num1++;
+               }while(prime_num1<prime_num);
+         
+          }while(prime_num<100);
+          
+          getche();
+          }
